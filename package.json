@@ -1,0 +1,50 @@
+{
+  "name": "gatsby-theme-hansin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin"
+  },
+  "bugs": {
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin/issues"
+  },
+  "license": "MIT",
+  "workspaces": [
+    "gatsby-theme-hansin",
+    "example"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "husky": "^4.0.0",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
+  },
+  "scripts": {
+    "start": "yarn workspace example develop",
+    "build": "yarn workspace example build",
+    "deploy": "npm run build && gh-pages -d example/public",
+    "test": "yarn workspace gatsby-theme-hansin test",
+    "release": "yarn workspace gatsby-theme-hansin run release",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,less}\"",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
+    "lint:fix": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",
+    "tsc": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^23.0.3",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.2.0"
+  }
+}
