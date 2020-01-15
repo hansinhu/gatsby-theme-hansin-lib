@@ -1,5 +1,5 @@
 {
-  "name": "@antv/gatsby-theme-antv",
+  "name": "gatsby-theme-hansin",
   "description": "Ant Visualization solution home page",
   "version": "0.10.39",
   "author": "AntV Team <antv@antfin.com>",
@@ -114,7 +114,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "release": "release-it -n",
-    "copy:components": "mkdir -p lib && cp -R .tmp/@antv/gatsby-theme-antv/site/components lib && cp site/components/*.less ./lib/components && cp site/common.json ./lib && cp -R site/images ./lib",
+    "copy:components": "mkdir -p lib && cp -R .tmp/gatsby-theme-hansin/site/components lib && cp site/components/*.less ./lib/components && cp site/common.json ./lib && cp -R site/images ./lib",
     "compile:components": "rm -rf .tmp lib && ../../node_modules/.bin/tsc --outDir .tmp --noEmit false -d && npm run copy:components",
     "test": "jest"
   },
