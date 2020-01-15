@@ -11,6 +11,7 @@
   "license": "MIT",
   "workspaces": [
     "gatsby-theme-hansin-lib",
+    "gatsby-theme-hansin",
     "example"
   ],
   "devDependencies": {

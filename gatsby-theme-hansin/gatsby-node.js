@@ -225,6 +225,7 @@ exports.createPages = async ({ actions, graphql, reporter, store }) => {
       }
     }
   `);
+
   // Handle errors
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`);
@@ -542,9 +543,28 @@ exports.sourceNodes = ({ actions }) => {
       target: String
     }
 
-    type SiteSiteMetadataRedirects implements Node {
-      from: String!
-      to: String
+    type SiteSiteMetadataLinkItem implements Node {
+      url: String!
+      title: String
+      icon: String
+    }
+
+    type SiteSiteMetadataMoreProduct implements Node {
+      icon: String
+      title: String
+      url: String!
+      description: String
+      openExternal: Boolean
+    }
+
+    type SiteSiteMetadataProduct implements Node {
+      title: String
+      icon: String
+      slogan: String
+      description: String
+      category: String
+      links: [SiteSiteMetadataLinkItem]
+      items: [SiteSiteMetadataMoreProduct]
     }
 
     type SiteSiteMetadata implements Node {
@@ -556,7 +576,6 @@ exports.sourceNodes = ({ actions }) => {
       navs: [SiteSiteMetadataNavs]
       docs: [SiteSiteMetadataDocs]
       examples: [SiteSiteMetadataExamples]
-      redirects: [SiteSiteMetadataRedirects]
       showSearch: Boolean
       showChinaMirror: Boolean
       showGithubCorner: Boolean
@@ -565,6 +584,9 @@ exports.sourceNodes = ({ actions }) => {
       playground: PlayGround
       docsearchOptions: DocsearchOptions
       versions: Json
+      productGroup: [SiteSiteMetadataProduct]
+      otherLinks: [SiteSiteMetadataLinkItem]
+      hiddenThemeAuthor: Boolean
     }
 
     type Site implements Node {

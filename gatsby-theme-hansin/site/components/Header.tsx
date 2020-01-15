@@ -10,10 +10,12 @@ import Search, { SearchProps } from './Search';
 import Products from './Products';
 import NavMenuItems, { Nav } from './NavMenuItems';
 import { getChinaMirrorHost } from '../utils';
-import AntvLogo from '../images/antv.svg';
+// import AntvLogo from '../images/antv.svg';
 import TranslationIcon from '../images/translation.svg';
 import ExternalLink from '../images/external-link.svg';
 import styles from './Header.module.less';
+
+const AntvLogo = () => <img src='//f.cfcdn.club/assets/ad023982d3c0708792d9fc4f30c1f316_160x160.png' />
 
 const { Option } = Select;
 

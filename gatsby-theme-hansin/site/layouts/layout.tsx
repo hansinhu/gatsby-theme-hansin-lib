@@ -3,11 +3,10 @@ import { useStaticQuery, graphql, withPrefix, Link } from 'gatsby';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { getCurrentLangKey } from 'ptz-i18n';
-import Helmet from 'react-helmet';
 import Seo from '../components/Seo';
 import Header from '../components/Header';
 import PageLoading from '../components/PageLoading';
-import Footer, { OLD_SITE_DOMAIN } from '../components/Footer';
+import Footer from '../components/Footer';
 import styles from './layout.module.less';
 
 i18n
@@ -62,15 +61,32 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
             }
             target
           }
-          redirects {
-            from
-            to
-          }
           docsearchOptions {
             apiKey
             indexName
           }
           versions
+          productGroup {
+            title
+            icon
+            slogan
+            links {
+              title
+              url
+              icon
+            }
+            items {
+              title
+              url
+              icon
+            }
+          }
+          otherLinks {
+            title
+            url
+            icon
+          }
+          hiddenThemeAuthor
         }
       }
       locales {
@@ -93,11 +109,14 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       showChinaMirror,
       showGithubCorner,
       showAntVProductsCard,
-      redirects = [],
       docsearchOptions,
       versions,
+      productGroup,
+      hiddenThemeAuthor,
+      otherLinks,
     },
   } = site;
+  console.log(productGroup, hiddenThemeAuthor, otherLinks)
   let resources = {};
   try {
     resources = JSON.parse(locales.internal.content);
@@ -130,30 +149,6 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
     return children;
   }
 
-  const getRediectUrl = () => {
-    const list = redirects || [];
-    for (let i = 0; i < list.length; i += 1) {
-      const { from = '', to, keepUrl } = list[i] as {
-        from: string | RegExp;
-        to: string;
-        keepUrl?: boolean;
-      };
-      // 支持字符串和正则表达式比较
-      if (
-        location.pathname !== from &&
-        !new RegExp(from).test(location.pathname)
-      ) {
-        return;
-      }
-      if (keepUrl && new RegExp(from).test(location.pathname)) {
-        return location.pathname.replace(new RegExp(from), to);
-      }
-      // 如果没有指定 to，则直接用替换成老版本的域名
-      return to || `${OLD_SITE_DOMAIN}${location.pathname}`;
-    }
-  };
-
-  const rediectUrl = getRediectUrl();
   const logoProps = logoUrl
     ? {
         logo: {
@@ -164,11 +159,6 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
 
   return (
     <>
-      {rediectUrl && (
-        <Helmet>
-          <meta httpEquiv="refresh" content={`0;url=${rediectUrl}`} />
-        </Helmet>
-      )}
       <Seo
         title={siteUrl === 'https://antv.vision' ? '' : title}
         lang={i18n.language}
@@ -193,7 +183,11 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
         {...logoProps}
       />
       <main className={styles.main}>{children}</main>
-      <Footer githubUrl={githubUrl} rootDomain="https://antv.vision" />
+      <Footer
+        githubUrl={githubUrl}
+        productGroup={productGroup}
+        rootDomain="https://antv.vision"
+      />
     </>
   );
 };

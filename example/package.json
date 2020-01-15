@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "@antv/g2": "^3.5.9",
-    "@antv/gatsby-theme-antv": "*",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "gatsby": "^2.15.34",
+    "gatsby-theme-hansin": "*",
     "ptz-i18n": "^1.0.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"

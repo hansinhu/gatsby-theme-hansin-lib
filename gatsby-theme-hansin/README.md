@@ -6,11 +6,9 @@
 
 ✨ Polished Gatsby theme for documentation site.
 
-[![](https://flat.badgen.net/npm/v/@antv/gatsby-theme-antv?icon=npm)](https://www.npmjs.com/package/@antv/gatsby-theme-antv)
-[![NPM downloads](http://img.shields.io/npm/dm/@antv/gatsby-theme-antv.svg?style=flat-square)](http://npmjs.com/@antv/gatsby-theme-antv)
+[![](https://flat.badgen.net/npm/v/gatsby-theme-hansin?icon=npm)](https://www.npmjs.com/package/gatsby-theme-hansin)
+[![NPM downloads](http://img.shields.io/npm/dm/gatsby-theme-hansin.svg?style=flat-square)](http://npmjs.com/gatsby-theme-hansin)
 ![CI status](https://github.com/hansinhu/gatsby-theme-hansin-lib/workflows/Node%20CI/badge.svg)
-[![Dependency Status](https://david-dm.org/antvis/gatsby-theme-antv.svg?style=flat-square&path=@antv/gatsby-theme-antv)](https://david-dm.org/antvis/gatsby-theme-antv?path=@antv/gatsby-theme-antv)
-[![devDependencies Status](https://david-dm.org/antvis/gatsby-theme-antv/dev-status.svg?style=flat-square&path=@antv/gatsby-theme-antv)](https://david-dm.org/antvis/gatsby-theme-antv?type=dev&path=@antv/gatsby-theme-antv)
 ![prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
 </div>
@@ -27,13 +25,7 @@
 
 ## Websites using it
 
-- ✨ https://antv.vision
-- ✨ https://g2plot.antv.vision
-- ✨ https://g2.antv.vision
-- ✨ https://g6.antv.vision
-- ✨ https://f2.antv.vision
-- ✨ https://l7.antv.vision
-- ✨ https://graphin.antv.vision
+- ✨ https://XXX.XXXXXXXX.com
 
 ## Usage
 
@@ -62,7 +54,7 @@ const { repository } = require('./package.json');
 module.exports = {
   plugins: [
     {
-      resolve: `@antv/gatsby-theme-antv`,
+      resolve: `gatsby-theme-hansin`,
       options: {
         // pagesPath: './site/pages',
         GATrackingId: `UA-XXXXXXXXX-X`,
@@ -103,12 +95,6 @@ module.exports = {
         '4.x': 'https://next.ant.design',
       },
     ],
-    redirects: [
-      {
-        from: /\/old-url/,
-        to: '/new-url', // 不指定 to 时直接跳转到 https://antv-2018.alipay.com/***
-      },
-    ],
   },
 };
 ```
@@ -128,15 +114,15 @@ module.exports = {
 - [Companies Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/blob/c6178d1baeebce4ef4e31773a6b533020b662b27/%40antv/gatsby-theme-antv/site/components/Companies.tsx#L6-L16)
 
 ```jsx
-import SEO from '@antv/gatsby-theme-antv/site/components/Seo';
-import Header from '@antv/gatsby-theme-antv/site/components/Header';
-import Footer from '@antv/gatsby-theme-antv/site/components/Footer';
-import Banner from '@antv/gatsby-theme-antv/site/components/Banner';
-import Features from '@antv/gatsby-theme-antv/site/components/Features';
-import Applications from '@antv/gatsby-theme-antv/site/components/Applications';
-import Companies from '@antv/gatsby-theme-antv/site/components/Companies';
+import SEO from 'gatsby-theme-hansin/site/components/Seo';
+import Header from 'gatsby-theme-hansin/site/components/Header';
+import Footer from 'gatsby-theme-hansin/site/components/Footer';
+import Banner from 'gatsby-theme-hansin/site/components/Banner';
+import Features from 'gatsby-theme-hansin/site/components/Features';
+import Applications from 'gatsby-theme-hansin/site/components/Applications';
+import Companies from 'gatsby-theme-hansin/site/components/Companies';
 
-// @antv/gatsby-theme-antv/components/Header for commonjs version
+// gatsby-theme-hansin/components/Header for commonjs version
 
 const Layout = () => {
   const features = [
@@ -266,7 +252,7 @@ Visit https://localhost:8000 to preview.
 ## Publish to npm
 
 ```bash
-cd @antv/gatsby-theme-antv
+cd gatsby-theme-hansin
 npm run release
 ```
 
@@ -281,14 +267,14 @@ npm run deploy
 ## Add Dependency
 
 ```bash
-cd @antv/gatsby-theme-antv
+cd gatsby-theme-hansin
 yarn add shallowequal
 ```
 
 or
 
 ```bash
-yarn workspace @antv/gatsby-theme-antv shallowequal
+yarn workspace gatsby-theme-hansin shallowequal
 ```
 
 ## Related libraries

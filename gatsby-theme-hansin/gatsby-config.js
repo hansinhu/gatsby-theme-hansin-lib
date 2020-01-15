@@ -24,6 +24,9 @@ module.exports = ({
       navs: [],
       docs: [],
       examples: [],
+      productGroup: [],
+      otherLinks: [],
+      hiddenThemeAuthor: false,
     },
     plugins: [
       `gatsby-plugin-react-helmet`,

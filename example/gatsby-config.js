@@ -3,13 +3,13 @@ const { version, repository, homepage } = require('./package.json');
 module.exports = {
   plugins: [
     {
-      resolve: '@antv/gatsby-theme-antv',
+      resolve: 'gatsby-theme-hansin',
       options: {},
     },
   ],
   siteMetadata: {
-    title: 'AntV test site',
-    description: 'Ant Visualization solution home page',
+    title: 'Your Site Title',
+    description: 'Site Description from meta info',
     siteUrl: homepage,
     githubUrl: repository.url,
     navs: [
@@ -80,10 +80,81 @@ module.exports = {
       },
     ],
     versions: {
-      [version]: 'https://ant.design',
-      '2.x': 'https://2x.ant.design',
-      '1.x': 'https://1x.ant.design',
+      [version]: `${homepage}`,
+      '2.x': `${homepage}`,
+      '1.x': `${homepage}`,
     },
+    productGroup: [
+      {
+        title: 'Test 1',
+        icon:
+          'https://gw.alipayobjects.com/zos/antfincdn/trEfLRh5pc/G2%252520keshihuatuxingyufa.svg',
+        slogan: '可视化引擎',
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+        category: 'ecology',
+        items: [
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 1-1',
+            url: `${homepage}`,
+          },
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 1-2',
+            url: `${homepage}`,
+          },
+        ],
+      },
+      {
+        title: 'Test 2',
+        icon:
+          'https://gw.alipayobjects.com/zos/antfincdn/D%26fDbWqVkv/F2%252520yidongduankeshihuafangan.svg',
+        slogan: '移动可视化方案',
+        description: '专注于移动端的可视化解决方案，兼容 H5/小程序/Weex 等多端环境',
+        category: 'ecology',
+        items: [
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 2-1',
+            url: `${homepage}`,
+          },
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 2-2',
+            url: `${homepage}`,
+          },
+        ],
+      },
+      {
+        title: 'Test 3',
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        items: [
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 3-1',
+            url: 'https://ant.design',
+            description: '企业级 UI 设计语言',
+            openExternal: true,
+          },
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 3-2',
+            url: 'https://yuque.com',
+            description: '知识创作与分享工具',
+            openExternal: true,
+          },
+          {
+            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Test 3-3',
+            url: 'https://yunfengdie.com',
+            description: '中台建站平台',
+            openExternal: true,
+          },
+        ],
+      }
+    ],
+    otherLinks: [],
+    hiddenThemeAuthor: false,
     playground: {
       container: '<div id="container" class="ok" />',
       playgroundDidMount: 'console.log("playgroundDidMount");',
