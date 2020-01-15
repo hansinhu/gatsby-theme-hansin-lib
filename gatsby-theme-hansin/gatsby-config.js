@@ -20,7 +20,7 @@ module.exports = ({
     siteMetadata: {
       title: `AntV`,
       description: `Ant Visualization solution home page`,
-      githubUrl: 'https://github.com/antvis/gatsby-theme-antv',
+      githubUrl: 'https://github.com/hansinhu/gatsby-theme-hansin-lib',
       navs: [],
       docs: [],
       examples: [],

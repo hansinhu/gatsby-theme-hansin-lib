@@ -11,10 +11,10 @@
   "homepage": "https://antvis.github.io",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antvis/gatsby-theme-antv"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib"
   },
   "bugs": {
-    "url": "https://github.com/antvis/gatsby-theme-antv/issues"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib/issues"
   },
   "dependencies": {
     "@babel/plugin-transform-modules-umd": "^7.2.0",

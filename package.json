@@ -1,16 +1,16 @@
 {
-  "name": "gatsby-theme-hansin",
+  "name": "gatsby-theme-hansin-lib",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/hansinhu/gatsby-theme-hansin"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib"
   },
   "bugs": {
-    "url": "https://github.com/hansinhu/gatsby-theme-hansin/issues"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib/issues"
   },
   "license": "MIT",
   "workspaces": [
-    "gatsby-theme-hansin",
+    "gatsby-theme-hansin-lib",
     "example"
   ],
   "devDependencies": {
