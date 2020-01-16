@@ -2,15 +2,12 @@
 
 <img width="1295" alt="图片" src="https://f.cfcdn.club/assets/6067832d0ace6d6c68b6d66195a807ef_1194x786.png">
 
-# Gatsby Theme for AntV ⚛
+# Gatsby Theme for Your web site ⚛
 
 ✨ Polished Gatsby theme for documentation site.
 
-[![](https://flat.badgen.net/npm/v/gatsby-theme-hansin?icon=npm)](https://www.npmjs.com/package/gatsby-themehansinv)
-[![NPM downloads](http://img.shields.io/npm/dm/gatsby-theme-hansin.svg?style=flat-square)](http://npmjs.com/gatsby-theme-hansin)
-![CI status](https://github.com/antvis/gatsby-theme-antv/workflows/Node%20CI/badge.svg)
-[![Dependency Status](https://david-dm.org/antvis/gatsby-theme-antv.svg?style=flat-square&path/gatsby-themehansinv)](https://david-dm.org/antvis/gatsby-theme-antv?path=gatsby-theme-hansin)
-[![devDependencies Status](https://david-dm.org/antvis/gatsby-theme-antv/dev-status.svg?style=flat-square&path=gatsby-theme-hansin)](https://david-dm.org/antvis/gatsby-theme-antv?type=dev&path/gatsby-themehansinv)
+![](https://flat.badgen.net/npm/v/gatsby-theme-hansin?icon=npm)
+![NPM downloads](https://img.shields.io/npm/dm/gatsby-theme-hansin.svg?style=flat-square)
 ![prettier code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
 </div>
@@ -25,23 +22,13 @@
 - 🆙 Easy customized header nav
 - 🧩 Built-in home page components
 
-## Websites using it
-
-- ✨ https://antv.vision
-- ✨ https://g2plot.antv.vision
-- ✨ https://g2.antv.vision
-- ✨ https://g6.antv.vision
-- ✨ https://f2.antv.vision
-- ✨ https://l7.antv.vision
-- ✨ https://graphin.antv.vision
-
 ## Usage
 
-Create a Gatsby site from [gatsby-starter-theme-antv](https://github.com/antvis/gatsby-starter-theme-antv).
+Create a Gatsby site from [gatsby-theme-hansin](https://github.com/hansinhu/gatsby-theme-hansin-lib).
 
 ```bash
 $ yarn global add gatsby-cli // or npm install gatsby-cli -g
-$ gatsby new mysite https://github.com/antvis/gatsby-starter-theme-antv
+$ gatsby new mysite https://github.com/hansinhu/gatsby-theme-hansin-lib
 ```
 
 Start developing.
@@ -50,8 +37,6 @@ Start developing.
 $ cd mysite
 $ yarn start
 ```
-
-> ✨ AntV 站点 [接入方式](https://github.com/antvis/antvis.github.io/issues/18#issuecomment-548754442) 和 [额外功能](https://github.com/antvis/antvis.github.io/issues/18#issuecomment-568692771)
 
 ### `gatsby-config.js`
 
@@ -78,8 +63,8 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    title: `AntV`,
-    description: `Ant Visualization solution home page`,
+    title: `Your Site Title`,
+    description: `Your site meta description`,
     githubUrl: repository.url,
     logoUrl: '', // 自定义 logo
     navs: [], // 用于定义顶部菜单
@@ -87,42 +72,37 @@ module.exports = {
     examples: [], // 用于定义演示页面的二级菜单，属性见下方
     showSearch: true, // 是否展示搜索框
     showLanguageSwitcher: true, // 用于定义是否展示语言切换
-    moreNavCards: [], // 是否展示更多链接
+    moreNavCards: [], // 更多菜单列表
     showGithubCorner: true, // 是否展示角落的 GitHub 图标
     playground: {
       container: '<canvas id="container" />', // 定义演示的渲染节点，默认 <div id="container" />
       playgroundDidMount: 'console.log("playgroundDidMount");',
       playgroundWillUnmount: 'console.log("playgroundWillUnmount");',
     },
-    versions: {
-      '1.x': 'https://1x.ant.design',
-      '2.x': 'https://2x.ant.design',
-      '3.x': 'https://ant.design',
-      '4.x': 'https://next.ant.design',
-    },
-    redirects: [
+    versions: [
       {
-        from: /\/old-url/,
-        to: '/new-url', // 不指定 to 时直接跳转到 https://antv-2018.alipay.com/***
+        '1.x': 'https://1x.xxxxxx',
+        '2.x': 'https://2x.xxxxxx',
+        '3.x': 'https://xxxxxx',
       },
     ],
   },
 };
 ```
 
-- `navs`: [props](https://github.com/antvis/gatsby-theme-antv/blob/aa8cdd7e24e965174cbe7173a841fd7d23537e52/%40antv/gatsby-theme-antv/gatsby-node.js#L242-L264)
-- `docs`: [props](https://github.com/antvis/gatsby-theme-antv/blob/aa8cdd7e24e965174cbe7173a841fd7d23537e52/%40antv/gatsby-theme-antv/gatsby-node.js#L242-L264)
-- `examples`: [props](https://github.com/antvis/gatsby-theme-antv/blob/aa8cdd7e24e965174cbe7173a841fd7d23537e52/%40antv/gatsby-theme-antv/gatsby-node.js#L242-L264)
+- `navs`: [props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- `docs`: [props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- `examples`: [props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
 
 ### Components
 
-- [Header Props](https://github.com/antvis/gatsby-theme-antv/blob/master/%40antv/gatsby-theme-antv/site/components/Header.tsx#L13-L39)
-- [Footer Props](https://github.com/antvis/gatsby-theme-antv/blob/046a9c4e32eea50b49347b114714425a9f99b4b7/%40antv/gatsby-theme-antv/site/components/Footer.tsx#L149-L159)
-- [SEO Props](https://github.com/antvis/gatsby-theme-antv/blob/046a9c4e32eea50b49347b114714425a9f99b4b7/%40antv/gatsby-theme-antv/site/components/Seo.tsx#L12-L17)
-- [Banner Props](https://github.com/antvis/gatsby-theme-antv/blob/c6178d1baeebce4ef4e31773a6b533020b662b27/%40antv/gatsby-theme-antv/site/components/Banner.tsx#L8-L31)
-- [Features Props](https://github.com/antvis/gatsby-theme-antv/blob/c6178d1baeebce4ef4e31773a6b533020b662b27/%40antv/gatsby-theme-antv/site/components/Features.tsx#L7-L17)
-- [Cases Props](https://github.com/antvis/gatsby-theme-antv/blob/c6178d1baeebce4ef4e31773a6b533020b662b27/%40antv/gatsby-theme-antv/site/components/Cases.tsx#L14-L25)
-- [Companies Props](https://github.com/antvis/gatsby-theme-antv/blob/c6178d1baeebce4ef4e31773a6b533020b662b27/%40antv/gatsby-theme-antv/site/components/Companies.tsx#L6-L16)
+- [Header Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [Footer Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [SEO Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [Banner Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [Features Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [Cases Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
+- [Companies Props](https://github.com/hansinhu/gatsby-theme-hansin-lib/)
 
 ```jsx
 import SEO from 'gatsby-theme-hansin/site/components/Seo';
@@ -214,10 +194,6 @@ const Layout = () => {
           console.log(language);
         }}
         defaultLanguage="zh"
-      />
-      <Footer
-      // columns={[]}
-      // bottom={<div>powered by antv</div>}
       />
 
       <Banner
