@@ -2,8 +2,6 @@ import React from 'react';
 import { default as RCFooter, FooterProps as RcFooterProps } from 'rc-footer';
 import { useTranslation } from 'react-i18next';
 import { Icon } from 'antd';
-// import { getProducts } from './getProducts';
-// import { useChinaMirrorHost } from '../hooks';
 import styles from './Footer.module.less';
 import 'rc-footer/assets/index.less'
 
@@ -24,36 +22,6 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const lang = language || i18n.language;
-  // const [isChinaMirrorHost] = useChinaMirrorHost();
-  // const products = getProducts({
-  //   t,
-  //   language: lang,
-  //   rootDomain,
-  //   isChinaMirrorHost,
-  // });
-
-  // const more = {
-  //   icon: (
-  //     <img
-  //       src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg"
-  //       alt="more products"
-  //     />
-  //   ),
-  //   title: t('更多产品'),
-  //   items: [
-  //     {
-  //       icon: (
-  //         <img
-  //           src="https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg"
-  //           alt="xtech"
-  //         />
-  //       ),
-  //       title: t('蚂蚁体验科技'),
-  //       url: 'https://xtech.antfin.com/',
-  //       openExternal: true,
-  //     },
-  //   ],
-  // };
 
   const defaultColumns = productGroup
     .map(product => ({

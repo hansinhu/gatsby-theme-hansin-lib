@@ -49,9 +49,13 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
           siteUrl
           logoUrl
           showSearch
-          showChinaMirror
           showLanguageSwitcher
-          showAntVProductsCard
+          moreNavCards {
+            icon
+            title
+            description
+            url
+          }
           showGithubCorner
           navs {
             slug
@@ -103,9 +107,8 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       logoUrl = '',
       showLanguageSwitcher,
       showSearch,
-      showChinaMirror,
       showGithubCorner,
-      showAntVProductsCard,
+      moreNavCards,
       docsearchOptions,
       versions,
       productGroup,
@@ -172,8 +175,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
         isHomePage={isHomePage}
         showSearch={parseNulltoUndefined(showSearch)}
         showGithubCorner={parseNulltoUndefined(showGithubCorner)}
-        showAntVProductsCard={parseNulltoUndefined(showAntVProductsCard)}
-        showChinaMirror={parseNulltoUndefined(showChinaMirror)}
+        moreNavCards={moreNavCards || []}
         showLanguageSwitcher={parseNulltoUndefined(showLanguageSwitcher)}
         docsearchOptions={docsearchOptions}
         versions={versions}

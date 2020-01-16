@@ -2,8 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
 import Product from './Product';
-import { getProducts } from './getProducts';
-import { useChinaMirrorHost } from '../hooks';
 import styles from './Product.module.less';
 
 interface ProductsProps {
@@ -11,22 +9,16 @@ interface ProductsProps {
   rootDomain: string;
   language?: 'zh' | 'en';
   className?: string;
+  moreNavCards: {[key: string]: string}[];
 }
 
 const Products: React.FC<ProductsProps> = ({
   show,
-  rootDomain = '',
   language,
   className,
+  moreNavCards,
 }) => {
   const { t, i18n } = useTranslation();
-  const [isChinaMirrorHost] = useChinaMirrorHost();
-  const data = getProducts({
-    t,
-    language: language || i18n.language,
-    rootDomain,
-    isChinaMirrorHost,
-  });
   return (
     <>
       <div
@@ -35,51 +27,15 @@ const Products: React.FC<ProductsProps> = ({
         })}
       >
         <div className={styles.container}>
-          <h3>{t('基础产品')}</h3>
+          <h3>{t('更多内容')}</h3>
           <ul>
-            {data
-              .filter(item => item.category === 'basic')
-              .map(product => (
+            {moreNavCards.map(product => (
                 <Product
                   key={product.title}
                   name={product.title}
                   slogan={product.slogan || ''}
                   description={product.description}
-                  url={(product.links || [])[0].url}
-                  icon={product.icon as string}
-                  links={product.links}
-                  language={language || i18n.language}
-                />
-              ))}
-          </ul>
-          <h3>{t('拓展产品')}</h3>
-          <ul>
-            {data
-              .filter(item => item.category === 'extension')
-              .map(product => (
-                <Product
-                  key={product.title}
-                  name={product.title}
-                  slogan={product.slogan || ''}
-                  description={product.description}
-                  url={(product.links || [])[0].url}
-                  icon={product.icon as string}
-                  links={product.links}
-                  language={language || i18n.language}
-                />
-              ))}
-          </ul>
-          <h3>{t('周边生态')}</h3>
-          <ul>
-            {data
-              .filter(item => item.category === 'ecology')
-              .map(product => (
-                <Product
-                  key={product.title}
-                  name={product.title}
-                  slogan={product.slogan || ''}
-                  description={product.description}
-                  url={(product.links || [])[0].url}
+                  url={product.url}
                   icon={product.icon as string}
                   language={language || i18n.language}
                 />

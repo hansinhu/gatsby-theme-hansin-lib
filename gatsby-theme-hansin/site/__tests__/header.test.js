@@ -9,6 +9,6 @@ describe(`Header`, () => {
     const { getByText } = render(
       <Header siteTitle={siteTitle} pathPrefix="/xxx" />,
     );
-    expect(getByText('所有产品')).toBeInTheDocument();
+    expect(getByText('更多内容')).toBeInTheDocument();
   });
 });

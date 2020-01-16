@@ -1,3 +1,5 @@
+@import './mixins';
+
 .notification {
   width: 50%;
   margin-right: 2%;
@@ -15,6 +17,13 @@
       font-size: 40px;
       line-height: 40px;
       font-weight: 500;
+      color: transparent;
+      background: linear-gradient(
+        60deg,
+        fade(@primary-color, 70%),
+        shade(@primary-color, 10%)
+      );
+      background-clip: text;
     }
     .content {
       padding-left: 20px;
@@ -27,7 +36,7 @@
         transition: all 0.3s;
       }
       .date {
-        color: rgba(216, 203, 249, 1);
+        color: fade(@primary-color, 40%);
         bottom: 0;
         font-size: 1em;
         margin-top: 4px;
@@ -37,7 +46,7 @@
   }
 
   &:hover .description {
-    color: rgba(89, 126, 247, 1);
+    color: @primary-color;
   }
 }
 

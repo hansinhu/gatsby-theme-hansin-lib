@@ -547,6 +547,7 @@ exports.sourceNodes = ({ actions }) => {
       url: String!
       title: String
       icon: String
+      description: String
     }
 
     type SiteSiteMetadataMoreProduct implements Node {
@@ -576,10 +577,9 @@ exports.sourceNodes = ({ actions }) => {
       docs: [SiteSiteMetadataDocs]
       examples: [SiteSiteMetadataExamples]
       showSearch: Boolean
-      showChinaMirror: Boolean
       showGithubCorner: Boolean
       showLanguageSwitcher: Boolean
-      showAntVProductsCard: Boolean
+      moreNavCards: [SiteSiteMetadataLinkItem]
       playground: PlayGround
       docsearchOptions: DocsearchOptions
       versions: Json
