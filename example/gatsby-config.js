@@ -88,9 +88,46 @@ module.exports = {
       '2.x': `${homepage}`,
       '1.x': `${homepage}`,
     },
+    moreNavCards: [
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-1',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-2',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-3',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-4',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-5',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+    ],
     productGroup: [
       {
-        title: 'Test 1',
+        title: 'More 1',
         icon:
           'https://gw.alipayobjects.com/zos/antfincdn/trEfLRh5pc/G2%252520keshihuatuxingyufa.svg',
         slogan: '可视化引擎',

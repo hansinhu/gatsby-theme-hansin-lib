@@ -111,29 +111,29 @@ const IndexPage = () => {
     },
     {
       text: t('Get Started'),
-      link: 'https://antv.alipay.com/zh-cn/index.html', // `/${i18n.language}/examples/basic`
+      link: 'https://github.com/hansinhu/gatsby-theme-hansin-lib', // `/${i18n.language}/examples/basic`
     },
   ];
 
   const notifications = [
     {
-      type: '更新2',
-      title: t('欢迎进入 2020 可视化智能研发时代'),
+      type: '更新',
+      title: 'The Library is updated to v1.1.1',
       date: '2020.01.08',
-      link: 'https://www.yuque.com/antv/blog/ygdubv',
+      link: 'https://github.com/hansinhu/gatsby-theme-hansin-lib',
     },
     {
-      type: t('更新3'),
-      title: t('AntV 11-22 品牌日：知源·致远'),
+      type: '消息',
+      title: 'The Library is updated to v1.1.1',
       date: '2019.11.22',
-      link: 'https://www.yuque.com/antv/blog/2019-release',
+      link: 'https://github.com/hansinhu/gatsby-theme-hansin-lib',
     },
   ];
 
   const coverImage = (
     <img
       width="100%"
-      src="https://gw.alipayobjects.com/mdn/antv_site/afts/img/A*o40BRo-ANLoAAAAAAAAAAABkARQnAQ"
+      src="https://f.cfcdn.club/assets/0f0392a81a4238673b2871dcbc8f9278.png"
       alt="cover"
     />
   );

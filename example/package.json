@@ -3,13 +3,13 @@
   "name": "example",
   "version": "1.0.0",
   "license": "MIT",
-  "homepage": "https://test.antv.vision",
+  "homepage": "https://github.com/hansinhu/gatsby-theme-hansin-lib",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antvis/antvis.github.io"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib"
   },
   "bugs": {
-    "url": "https://github.com/antvis/antvis.github.io/issues"
+    "url": "https://github.com/hansinhu/gatsby-theme-hansin-lib/issues"
   },
   "scripts": {
     "build": "npm run clean && gatsby build --prefix-paths --no-uglify",

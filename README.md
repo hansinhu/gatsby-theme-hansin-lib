@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="1295" alt="图片" src="https://user-images.githubusercontent.com/507615/69481549-49b39d00-0e4d-11ea-87fd-1e7741f4bdf1.png">
+<img width="1295" alt="图片" src="https://f.cfcdn.club/assets/6067832d0ace6d6c68b6d66195a807ef_1194x786.png">
 
 # Gatsby Theme for AntV ⚛
 
@@ -86,9 +86,8 @@ module.exports = {
     docs: [], // 用于定义文档页面的二级分类菜单
     examples: [], // 用于定义演示页面的二级菜单，属性见下方
     showSearch: true, // 是否展示搜索框
-    showChinaMirror: true, // 是否展示国内镜像链接
     showLanguageSwitcher: true, // 用于定义是否展示语言切换
-    showAntVProductsCard: true, // 是否展示 AntV 系列产品的卡片链接
+    moreNavCards: [], // 是否展示更多链接
     showGithubCorner: true, // 是否展示角落的 GitHub 图标
     playground: {
       container: '<canvas id="container" />', // 定义演示的渲染节点，默认 <div id="container" />
