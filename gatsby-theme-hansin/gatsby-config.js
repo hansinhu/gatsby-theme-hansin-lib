@@ -10,7 +10,7 @@ module.exports = ({
   pagesPath = './site/pages',
   GATrackingId,
   theme = {
-    'primary-color': '#873bf4',
+    'primary-color': '#fa4946',
   },
   pathPrefix,
   pwa = false,

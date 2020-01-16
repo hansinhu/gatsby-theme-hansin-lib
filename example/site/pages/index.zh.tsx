@@ -5,7 +5,7 @@ import Banner from 'gatsby-theme-hansin/site/components/Banner';
 import Companies from 'gatsby-theme-hansin/site/components/Companies';
 import Features from 'gatsby-theme-hansin/site/components/Features';
 import Cases from 'gatsby-theme-hansin/site/components/Cases';
-import BannerSVG from 'gatsby-theme-hansin/site/components/BannerSVG';
+// import BannerSVG from 'gatsby-theme-hansin/site/components/BannerSVG';
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation();
@@ -105,26 +105,48 @@ const IndexPage = () => {
 
   const bannerButtons = [
     {
-      text: t('图表示例'),
+      text: t('Features'),
       link: '#features',
       type: 'primary',
     },
     {
-      text: t('现在开始使用'),
+      text: t('Get Started'),
       link: 'https://antv.alipay.com/zh-cn/index.html', // `/${i18n.language}/examples/basic`
     },
   ];
 
-  // const coverImage = <img width='100%' src='https://gw.alipayobjects.com/mdn/antv_site/afts/img/A*o40BRo-ANLoAAAAAAAAAAABkARQnAQ' alt='cover' />
+  const notifications = [
+    {
+      type: '更新2',
+      title: t('欢迎进入 2020 可视化智能研发时代'),
+      date: '2020.01.08',
+      link: 'https://www.yuque.com/antv/blog/ygdubv',
+    },
+    {
+      type: t('更新3'),
+      title: t('AntV 11-22 品牌日：知源·致远'),
+      date: '2019.11.22',
+      link: 'https://www.yuque.com/antv/blog/2019-release',
+    },
+  ];
+
+  const coverImage = (
+    <img
+      width="100%"
+      src="https://gw.alipayobjects.com/mdn/antv_site/afts/img/A*o40BRo-ANLoAAAAAAAAAAABkARQnAQ"
+      alt="cover"
+    />
+  );
   return (
     <>
-      <SEO title={t('蚂蚁数据可视化')} lang={i18n.language} />
+      <SEO title={t('Site title')} lang={i18n.language} />
       <Banner
-        // coverImage={coverImage}
-        coverImage={<BannerSVG />}
-        title={t('让数据栩栩如生')}
+        coverImage={coverImage}
+        notifications={notifications}
+        // coverImage={<BannerSVG />}
+        title={t('Banner Title')}
         description={t(
-          'AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae asperiores fugiat facere harum recusandae doloribus quis, corrupti, ab corporis id iste! Eius, ducimus fuga tempora modi alias explicabo amet quibusdam.',
         )}
         className="banner"
         buttons={bannerButtons}

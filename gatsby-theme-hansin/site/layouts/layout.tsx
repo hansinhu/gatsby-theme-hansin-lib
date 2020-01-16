@@ -70,15 +70,12 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
             title
             icon
             slogan
-            links {
-              title
-              url
-              icon
-            }
             items {
               title
               url
               icon
+              description
+              openExternal
             }
           }
           otherLinks {
@@ -116,7 +113,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       otherLinks,
     },
   } = site;
-  console.log(productGroup, hiddenThemeAuthor, otherLinks)
+  console.log(productGroup, hiddenThemeAuthor, otherLinks);
   let resources = {};
   try {
     resources = JSON.parse(locales.internal.content);

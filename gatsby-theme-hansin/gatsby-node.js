@@ -563,7 +563,6 @@ exports.sourceNodes = ({ actions }) => {
       slogan: String
       description: String
       category: String
-      links: [SiteSiteMetadataLinkItem]
       items: [SiteSiteMetadataMoreProduct]
     }
 

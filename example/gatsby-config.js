@@ -4,7 +4,11 @@ module.exports = {
   plugins: [
     {
       resolve: 'gatsby-theme-hansin',
-      options: {},
+      options: {
+        theme: {
+          'primary-color': '#fa4946',
+        },
+      },
     },
   ],
   siteMetadata: {
@@ -94,12 +98,14 @@ module.exports = {
         category: 'ecology',
         items: [
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 1-1',
             url: `${homepage}`,
           },
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 1-2',
             url: `${homepage}`,
           },
@@ -110,16 +116,19 @@ module.exports = {
         icon:
           'https://gw.alipayobjects.com/zos/antfincdn/D%26fDbWqVkv/F2%252520yidongduankeshihuafangan.svg',
         slogan: '移动可视化方案',
-        description: '专注于移动端的可视化解决方案，兼容 H5/小程序/Weex 等多端环境',
+        description:
+          '专注于移动端的可视化解决方案，兼容 H5/小程序/Weex 等多端环境',
         category: 'ecology',
         items: [
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 2-1',
             url: `${homepage}`,
           },
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 2-2',
             url: `${homepage}`,
           },
@@ -127,31 +136,35 @@ module.exports = {
       },
       {
         title: 'Test 3',
-        icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
         items: [
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 3-1',
             url: 'https://ant.design',
             description: '企业级 UI 设计语言',
             openExternal: true,
           },
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 3-2',
             url: 'https://yuque.com',
             description: '知识创作与分享工具',
             openExternal: true,
           },
           {
-            icon: 'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
             title: 'Test 3-3',
             url: 'https://yunfengdie.com',
             description: '中台建站平台',
             openExternal: true,
           },
         ],
-      }
+      },
     ],
     otherLinks: [],
     hiddenThemeAuthor: false,

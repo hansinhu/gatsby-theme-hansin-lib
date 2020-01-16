@@ -64,23 +64,8 @@ const Banner: React.FC<BannerProps> = ({
   const { site } = useStaticQuery(query);
   const { githubUrl } = site.siteMetadata;
 
-  const insNotifications: NotificationProps[] = [
-    {
-      type: t('推荐'),
-      title: t('欢迎进入 2020 可视化智能研发时代'),
-      date: '2020.01.08',
-      link: 'https://www.yuque.com/antv/blog/ygdubv',
-    },
-    {
-      type: t('推荐'),
-      title: t('AntV 11-22 品牌日：知源·致远'),
-      date: '2019.11.22',
-      link: 'https://www.yuque.com/antv/blog/2019-release',
-    },
-  ];
-
-  const notificationsNode = (notifications || insNotifications)
-    .slice(0, 2)
+  const notificationsNode = (notifications || [])
+    .slice(0, 10)
     .map((notification, i) => (
       <Notification index={i} key={i} {...notification} />
     ));
