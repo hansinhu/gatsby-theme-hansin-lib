@@ -10,11 +10,8 @@ import Search, { SearchProps } from './Search';
 import Products from './Products';
 import NavMenuItems, { Nav } from './NavMenuItems';
 import { getChinaMirrorHost } from '../utils';
-// import AntvLogo from '../images/antv.svg';
 import TranslationIcon from '../images/translation.svg';
 import styles from './Header.module.less';
-
-const AntvLogo = () => <img src='//f.cfcdn.club/assets/ad023982d3c0708792d9fc4f30c1f316_160x160.png' />
 
 const { Option } = Select;
 
@@ -54,7 +51,7 @@ interface HeaderProps {
   /** AntV root 域名，直接用主题的可不传 */
   rootDomain?: string;
   /** 是否显示 AntV 产品卡片 */
-  moreNavCards?: {[key: string]: string}[];
+  moreNavCards?: { [key: string]: string }[];
   /** algolia 搜索配置 */
   docsearchOptions?: SearchProps['docsearchOptions'];
   /** 展示版本切换 */
@@ -94,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({
   logo,
   onLanguageChange,
   siteUrl,
-  githubUrl = 'https://github.com/antvis',
+  githubUrl = 'https://github.com/hansinhu',
   defaultLanguage,
   Link = 'a',
   transparent,
@@ -140,7 +137,7 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   const { img, link } = {
-    img: <AntvLogo />,
+    img: null,
     link: '',
     ...logo,
   };
@@ -181,24 +178,12 @@ const Header: React.FC<HeaderProps> = ({
         onClick: onToggleProductMenuVisible,
       };
 
-  let defaultLogoLink;
+  let logoLink;
   if (link) {
-    defaultLogoLink = link;
-  } else if (siteUrl === 'https://antv.vision') {
-    defaultLogoLink = `/${lang}`;
+    logoLink = link;
   } else {
-    defaultLogoLink = `https://antv.vision`;
+    logoLink = siteUrl;
   }
-
-  const [logoLink, setLogoLink] = useState(defaultLogoLink);
-  useEffect(() => {
-    if (
-      window.location.host.includes('gitee.io') &&
-      window.location.host.includes('antv')
-    ) {
-      setLogoLink(`https://antv.gitee.io/${lang}`);
-    }
-  }, []);
 
   const menu = (
     <ul

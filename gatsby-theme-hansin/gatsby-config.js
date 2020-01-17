@@ -18,15 +18,16 @@ module.exports = ({
 }) => {
   const config = {
     siteMetadata: {
-      title: `AntV`,
-      description: `Ant Visualization solution home page`,
-      githubUrl: 'https://github.com/hansinhu/gatsby-theme-hansin-lib',
+      title: `Site Title`,
+      description: `Your site description`,
+      githubUrl: '',
       navs: [],
       docs: [],
       examples: [],
-      productGroup: [],
-      otherLinks: [],
+      footerLinks: [],
+      bottomLinks: [],
       hiddenThemeAuthor: false,
+      siteCopyright: '',
     },
     plugins: [
       `gatsby-plugin-react-helmet`,

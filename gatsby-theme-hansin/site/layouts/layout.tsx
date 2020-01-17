@@ -70,7 +70,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
             indexName
           }
           versions
-          productGroup {
+          footerLinks {
             title
             icon
             slogan
@@ -82,12 +82,13 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
               openExternal
             }
           }
-          otherLinks {
+          bottomLinks {
             title
             url
             icon
           }
           hiddenThemeAuthor
+          siteCopyright
         }
       }
       locales {
@@ -111,12 +112,12 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       moreNavCards,
       docsearchOptions,
       versions,
-      productGroup,
+      footerLinks,
       hiddenThemeAuthor,
-      otherLinks,
+      siteCopyright,
+      bottomLinks = [],
     },
   } = site;
-  console.log(productGroup, hiddenThemeAuthor, otherLinks);
   let resources = {};
   try {
     resources = JSON.parse(locales.internal.content);
@@ -164,7 +165,7 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
         lang={i18n.language}
       />
       <Header
-        subTitle={siteUrl === 'https://antv.vision' ? '' : title}
+        subTitle={title}
         path={path}
         pathPrefix={pathPrefix}
         navs={navs}
@@ -184,8 +185,10 @@ const Layout: React.FC<LayoutProps> = ({ children, location }) => {
       <main className={styles.main}>{children}</main>
       <Footer
         githubUrl={githubUrl}
-        productGroup={productGroup}
-        rootDomain="https://antv.vision"
+        footerLinks={footerLinks}
+        bottomLinks={bottomLinks}
+        hiddenThemeAuthor={hiddenThemeAuthor}
+        siteCopyright={siteCopyright}
       />
     </>
   );

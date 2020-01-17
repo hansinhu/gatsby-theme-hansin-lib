@@ -74,6 +74,10 @@ module.exports = {
     showLanguageSwitcher: true, // 用于定义是否展示语言切换
     moreNavCards: [], // 更多菜单列表
     showGithubCorner: true, // 是否展示角落的 GitHub 图标
+    footerLinks: [], // 用于定义footer更多链接
+    bottomLinks: [], // 用于定义footer底部链接，如社交信息等
+    hiddenThemeAuthor: false, // 是否隐藏该theme作者的链接
+    siteCopyright: '© 2020 XXXXXX', // 网站版权
     playground: {
       container: '<canvas id="container" />', // 定义演示的渲染节点，默认 <div id="container" />
       playgroundDidMount: 'console.log("playgroundDidMount");',
@@ -171,21 +175,16 @@ const Layout = () => {
     },
   ];
 
-  const downloadButton = {
-    text: '下载使用',
-    link: 'https://antv.alipay.com/zh-cn/index.html',
-  };
-
   return (
     <>
       <SEO title="蚂蚁数据可视化" lang="zh" />
       <Header
         subTitle="子产品名"
         logo={{
-          link: 'https://antv.alipay.com',
+          link: 'https://github.com/hansinhu/gatsby-theme-hansin-lib',
           img: <img src="url" />,
         }}
-        githubUrl="https://github.com/antvis/g2"
+        githubUrl="https://github.com/hansinhu/gatsby-theme-hansin-lib"
         // docs={[]}
         showSearch={false}
         showGithubCorner={false}
@@ -206,8 +205,6 @@ const Layout = () => {
         style={{}}
         className="Banner 的 className"
         video="视频按钮点开后视频的链接，不传则不会出现视频按钮"
-        githubStarLink="Github Star 链接，不传则不会出现 GitHub Start 按钮"
-        downloadButton={downloadButton} // 不传则不会出现下载按钮
       />
       <Features
         title="优势页面名称" // 可不传

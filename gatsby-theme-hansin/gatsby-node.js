@@ -558,7 +558,7 @@ exports.sourceNodes = ({ actions }) => {
       openExternal: Boolean
     }
 
-    type SiteSiteMetadataProduct implements Node {
+    type SiteSiteMetadataFooter implements Node {
       title: String
       icon: String
       slogan: String
@@ -583,9 +583,10 @@ exports.sourceNodes = ({ actions }) => {
       playground: PlayGround
       docsearchOptions: DocsearchOptions
       versions: Json
-      productGroup: [SiteSiteMetadataProduct]
-      otherLinks: [SiteSiteMetadataLinkItem]
+      footerLinks: [SiteSiteMetadataFooter]
+      bottomLinks: [SiteSiteMetadataLinkItem]
       hiddenThemeAuthor: Boolean
+      siteCopyright: String
     }
 
     type Site implements Node {

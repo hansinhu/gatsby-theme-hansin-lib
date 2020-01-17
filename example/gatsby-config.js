@@ -15,6 +15,8 @@ module.exports = {
     title: 'Your Site Title',
     description: 'Site Description from meta info',
     siteUrl: homepage,
+    logoUrl:
+      'https://f.cfcdn.club/assets/4e4863f9b1b33ffdc7821e872317c11a_131x128.png',
     githubUrl: repository.url,
     navs: [
       {
@@ -125,9 +127,9 @@ module.exports = {
         description: '数据驱动，高度易用，可扩展的可视化图形语法。',
       },
     ],
-    productGroup: [
+    footerLinks: [
       {
-        title: 'More 1',
+        title: 'Footer01',
         icon:
           'https://gw.alipayobjects.com/zos/antfincdn/trEfLRh5pc/G2%252520keshihuatuxingyufa.svg',
         slogan: '可视化引擎',
@@ -137,19 +139,19 @@ module.exports = {
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 1-1',
+            title: 'Footer01-1',
             url: `${homepage}`,
           },
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 1-2',
+            title: 'Footer01-2',
             url: `${homepage}`,
           },
         ],
       },
       {
-        title: 'Test 2',
+        title: 'Footer02',
         icon:
           'https://gw.alipayobjects.com/zos/antfincdn/D%26fDbWqVkv/F2%252520yidongduankeshihuafangan.svg',
         slogan: '移动可视化方案',
@@ -160,51 +162,69 @@ module.exports = {
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 2-1',
+            title: 'Footer02-1',
             url: `${homepage}`,
           },
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 2-2',
+            title: 'Footer02-2',
             url: `${homepage}`,
           },
         ],
       },
       {
-        title: 'Test 3',
+        title: 'Footer03',
         icon:
           'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
         items: [
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 3-1',
-            url: 'https://ant.design',
+            title: 'Footer03-1',
+            url: `${homepage}`,
             description: '企业级 UI 设计语言',
             openExternal: true,
           },
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 3-2',
-            url: 'https://yuque.com',
+            title: 'Footer03-2',
+            url: `${homepage}`,
             description: '知识创作与分享工具',
             openExternal: true,
           },
           {
             icon:
               'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
-            title: 'Test 3-3',
-            url: 'https://yunfengdie.com',
+            title: 'Footer03-3',
+            url: `${homepage}`,
             description: '中台建站平台',
             openExternal: true,
           },
         ],
       },
     ],
-    otherLinks: [],
+    bottomLinks: [
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'Bottom1',
+        url: `${homepage}`,
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'Bottom2',
+        url: `${homepage}`,
+      },
+      {
+        title: 'Bottom3',
+        url: `${homepage}`,
+      },
+    ],
     hiddenThemeAuthor: false,
+    siteCopyright: '© 2020 XXXXXX',
     playground: {
       container: '<div id="container" class="ok" />',
       playgroundDidMount: 'console.log("playgroundDidMount");',
