@@ -9,10 +9,26 @@ interface FooterProps extends RcFooterProps {
   rootDomain?: string;
   language?: string;
   githubUrl?: string;
-  footerLinks?: Array<any>;
-  bottomLinks?: Array<any>;
+  footerLinks?: FooterProduct[];
+  bottomLinks?: FooterItem[];
   hiddenThemeAuthor?: boolean;
   siteCopyright?: string;
+  columns?: Array<any>;
+}
+
+interface FooterItem {
+  title?: string;
+  url?: string;
+  icon?: string;
+  description?: string;
+  openExternal?: boolean;
+}
+
+interface FooterProduct {
+  title?: string;
+  icon?: string;
+  slogan?: string;
+  items?: FooterItem[];
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -27,14 +43,14 @@ const Footer: React.FC<FooterProps> = ({
   const { t, i18n } = useTranslation();
   const lang = language || i18n.language;
 
-  const defaultColumns = footerLinks.map(product => ({
+  const defaultColumns = footerLinks.map((product: FooterProduct) => ({
     title: (
       <span>
         {product.title}
         <span className={styles.description}>{product.slogan}</span>
       </span>
     ),
-    items: (product.items || []).map(item => ({
+    items: (product.items || []).map((item: FooterItem) => ({
       ...item,
       icon: <img src={item.icon} alt="more products" />,
     })),

@@ -26,6 +26,7 @@
     "deploy": "npm run build && gh-pages -d example/public",
     "test": "yarn workspace gatsby-theme-hansin test",
     "release": "yarn workspace gatsby-theme-hansin run release",
+    "compile": "yarn workspace gatsby-theme-hansin run compile:components",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,less}\"",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "lint:fix": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",

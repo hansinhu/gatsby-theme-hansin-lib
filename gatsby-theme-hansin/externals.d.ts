@@ -6,7 +6,7 @@ declare module '*.less' {
 }
 
 declare module '*.svg' {
-  export default React.ReactComponent;
+  export default React.PureComponent;
 }
 
 declare module 'ptz-i18n';
@@ -24,7 +24,7 @@ declare module 'docsearch.js';
 declare module 'video-react';
 
 interface Document {
-  exitFullscreen: () => void;
+  exitFullscreen: () => Promise<void>;
   mozCancelFullScreen: () => void;
   webkitExitFullscreen: () => void;
   fullscreenElement: () => void;

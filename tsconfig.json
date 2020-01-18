@@ -1,5 +1,5 @@
 {
-  "include": ["@antv/gatsby-theme-antv", "example"],
+  "include": ["gatsby-theme-hansin", "example"],
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
