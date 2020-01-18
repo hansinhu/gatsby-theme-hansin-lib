@@ -30,7 +30,7 @@
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "lint:fix": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",
     "tsc": "tsc",
-    "update-starter": "cp -r ./example/ ../gatsby-theme-hansin-starter"
+    "cp-tmpl": "cp -r ./example/ ../gatsby-theme-hansin-starter & cp ./README.md ../gatsby-theme-hansin-starter"
   },
   "husky": {
     "hooks": {

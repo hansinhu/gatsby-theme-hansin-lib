@@ -28,7 +28,7 @@ Create a Gatsby site from [gatsby-theme-hansin](https://github.com/hansinhu/gats
 
 ```bash
 $ yarn global add gatsby-cli // or npm install gatsby-cli -g
-$ gatsby new mysite https://github.com/hansinhu/gatsby-theme-hansin-lib
+$ gatsby new mysite https://github.com/hansinhu/gatsby-theme-hansin-starter
 ```
 
 Start developing.
