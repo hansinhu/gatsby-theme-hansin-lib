@@ -29,7 +29,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,less}\"",
     "lint": "eslint . --ext '.js,.jsx,.ts,.tsx'",
     "lint:fix": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "update-starter": "cp -r ./example/ ../gatsby-theme-hansin-starter"
   },
   "husky": {
     "hooks": {
