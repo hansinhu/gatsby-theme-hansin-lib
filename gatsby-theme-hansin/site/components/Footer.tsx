@@ -1,7 +1,7 @@
 import React from 'react';
 import { default as RCFooter, FooterProps as RcFooterProps } from 'rc-footer';
 import { useTranslation } from 'react-i18next';
-import { Icon } from 'antd';
+// import { Icon } from 'antd';
 import styles from './Footer.module.less';
 import 'rc-footer/assets/index.less';
 
@@ -17,7 +17,7 @@ interface FooterProps extends RcFooterProps {
 }
 
 interface FooterItem {
-  title?: string;
+  title: string;
   url?: string;
   icon?: string;
   description?: string;
@@ -25,7 +25,7 @@ interface FooterItem {
 }
 
 interface FooterProduct {
-  title?: string;
+  title: string;
   icon?: string;
   slogan?: string;
   items?: FooterItem[];
@@ -42,16 +42,20 @@ const Footer: React.FC<FooterProps> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const lang = language || i18n.language;
+  // eslint-disable-next-line no-console
+  console.log('lang:', lang);
 
   const defaultColumns = footerLinks.map((product: FooterProduct) => ({
     title: (
       <span>
-        {product.title}
-        <span className={styles.description}>{product.slogan}</span>
+        {t(product.title)}
+        <span className={styles.description}>{t(product.slogan || '')}</span>
       </span>
     ),
     items: (product.items || []).map((item: FooterItem) => ({
       ...item,
+      title: t(item.title),
+      description: t(item.description || ''),
       icon: <img src={item.icon} alt="more products" />,
     })),
   }));
@@ -81,7 +85,7 @@ const Footer: React.FC<FooterProps> = ({
                       alt={item.title}
                     />
                   ) : (
-                    item.title
+                    t(item.title)
                   )}
                 </a>
               ))}
