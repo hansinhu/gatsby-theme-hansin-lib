@@ -15,12 +15,6 @@ redirect_from:
 
 G2 是一套基于可视化编码的图形语法，以数据驱动，具有高度的易用性和扩展性，用户无需关注各种繁琐的实现细节，一条语句即可构建出各种各样的可交互的统计图表。
 
-**在此衷心感谢[《The Grammar of Graphics》](https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/GOG.html)的作者 [Leland Wilkinson](https://en.wikipedia.org/wiki/Leland_Wilkinson)，为 G2 的图形语法提供了理论基础！**
-
-[了解更多 G2 详情](https://antv.alipay.com/zh-cn/g2/3.x/index.html).
-
-<img src="https://gw.alipayobjects.com/zos/rmsportal/AOwgKIjknXfggPijmhym.gif" width="200"><img src="https://gw.alipayobjects.com/zos/rmsportal/nfiOREzMIsENrzUeLOGR.gif" width="200"><img src="https://gw.alipayobjects.com/zos/rmsportal/uZZmaudtKRnvUhmUdZSZ.gif" width="180"><img src="https://gw.alipayobjects.com/zos/rmsportal/ifSTXzrGbvtLRpnAvAiZ.gif" width="200">
-
 ## 安装
 
 ```bash
@@ -72,10 +66,6 @@ chart
 chart.render();
 ```
 
-[更多示例](https://antv.alipay.com/zh-cn/g2/3.x/demo/index.html)
-
-![demos](https://user-images.githubusercontent.com/1655789/34187141-d800fe94-e56a-11e7-878a-4dc0e4f538d9.png)
-
 ## 本地开发
 
 ```bash
@@ -89,19 +79,6 @@ $ npm run dev
 
 # 打开 demo
 $ npm run demos
-```
-
-## ~~体验改进计划说明~~
-
-~~为了更好服务用户，G2 会将 URL 和版本信息发送回 AntV 服务器：~~
-
-~~https://kcart.alipay.com/web/bi.do~~
-
-~~**除了 URL 与 G2 版本信息外，不会收集任何其他信息**，一切为了能对 G2 的运行情况有更多了解，以更好服务于用户。如有担心，可以通过下面的代码关闭：~~
-
-```js
-// 关闭 G2 的体验改进计划打点请求
-G2.track(false);
 ```
 
 **更新**

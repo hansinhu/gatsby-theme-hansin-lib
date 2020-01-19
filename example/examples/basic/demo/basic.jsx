@@ -1,5 +1,7 @@
 import G2 from '@antv/g2';
+import React from 'react';
 import insertCss from 'insert-css';
+console.log(React);
 
 insertCss(`
   .custom { background: blue; }
