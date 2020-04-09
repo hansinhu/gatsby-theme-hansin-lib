@@ -63,7 +63,6 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    author: 'hansinhu',
     title: `Your Site Title`,
     description: `Your site meta description`,
     githubUrl: repository.url,

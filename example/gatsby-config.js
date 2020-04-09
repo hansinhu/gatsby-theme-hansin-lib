@@ -12,7 +12,6 @@ module.exports = {
     },
   ],
   siteMetadata: {
-    author: 'hansinhu',
     title: 'Your Site Title',
     description: 'Site Description from meta info',
     siteUrl: homepage,
