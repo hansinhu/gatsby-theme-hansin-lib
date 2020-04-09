@@ -63,6 +63,7 @@ module.exports = {
     },
   ],
   siteMetadata: {
+    author: 'hansinhu',
     title: `Your Site Title`,
     description: `Your site meta description`,
     githubUrl: repository.url,
@@ -79,13 +80,11 @@ module.exports = {
       playgroundDidMount: 'console.log("playgroundDidMount");',
       playgroundWillUnmount: 'console.log("playgroundWillUnmount");',
     },
-    versions: [
-      {
-        '1.x': 'https://1x.xxxxxx',
-        '2.x': 'https://2x.xxxxxx',
-        '3.x': 'https://xxxxxx',
-      },
-    ],
+    versions: {
+      '1.x': 'https://1x.xxxxxx',
+      '2.x': 'https://2x.xxxxxx',
+      '3.x': 'https://xxxxxx',
+    },
   },
 };
 ```
