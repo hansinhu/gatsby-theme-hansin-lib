@@ -42,48 +42,257 @@ $ yarn start
 
 ```js
 // gatsby-config.js
-const { repository } = require('./package.json');
+const { version, repository, homepage } = require('./package.json');
 
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-theme-hansin`,
+      resolve: 'gatsby-theme-hansin',
       options: {
-        // pagesPath: './site/pages',
-        GATrackingId: `UA-XXXXXXXXX-X`,
-        pathPrefix: '/g2',
-        // antd 主题：https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
         theme: {
-          'primary-color': '#873bf4',
+          'primary-color': '#fa4946',
         },
-        pwa: true, // 是否开启 gatsby-plugin-offline
-        cname: true, // 是否自动从 siteUrl 中提取 CNAME 文件
-        codeSplit: true, // 是否开启 gatsby 按路由的代码分割，默认为 false
       },
     },
   ],
   siteMetadata: {
-    title: `Your Site Title`,
-    description: `Your site meta description`,
+    title: 'Your Site Title',
+    description: 'Site Description from meta info',
+    siteUrl: homepage,
+    logoUrl:
+      'https://f.cfcdn.club/assets/4e4863f9b1b33ffdc7821e872317c11a_131x128.png',
     githubUrl: repository.url,
-    logoUrl: '', // 自定义 logo
-    navs: [], // 用于定义顶部菜单
-    docs: [], // 用于定义文档页面的二级分类菜单
-    examples: [], // 用于定义演示页面的二级菜单，属性见下方
-    showSearch: true, // 是否展示搜索框
-    showLanguageSwitcher: true, // 用于定义是否展示语言切换
-    moreNavCards: [], // 更多菜单列表
-    showGithubCorner: true, // 是否展示角落的 GitHub 图标
+    navs: [
+      {
+        slug: 'docs/specification/getting-started',
+        title: {
+          zh: '设计语言',
+          en: 'Specification',
+        },
+      },
+      {
+        slug: 'docs/other',
+        title: {
+          zh: '其他文档',
+          en: 'other',
+        },
+      },
+      {
+        slug: 'examples',
+        title: {
+          zh: '图表演示',
+          en: 'Examples',
+        },
+      },
+      {
+        slug: 'independent',
+        title: {
+          zh: '独立',
+          en: 'MyApp',
+        },
+        // target: '_blank',
+      },
+    ],
+    docs: [
+      {
+        slug: 'specification/category',
+        title: {
+          zh: '分类一',
+          en: 'category1',
+        },
+        order: 4,
+      },
+      {
+        slug: 'specification/category/three',
+        title: {
+          zh: '第三层',
+          en: 'three level',
+        },
+        order: 2,
+      },
+      {
+        slug: 'other/category',
+        title: {
+          zh: '分类二',
+          en: 'category2',
+        },
+        order: 4,
+      },
+    ],
+    examples: [
+      {
+        slug: 'category',
+        icon: 'pie',
+        title: {
+          zh: '饼图分类',
+          en: 'Category',
+        },
+      },
+    ],
+    versions: {
+      [version]: `${homepage}`,
+      '2.x': `${homepage}`,
+      '1.x': `${homepage}`,
+    },
+    moreNavCards: [
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-1',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-2',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-3',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-4',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'More 1-5',
+        url: `${homepage}`,
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+      },
+    ],
+    footerLinks: [
+      {
+        title: 'Footer01',
+        icon:
+          'https://gw.alipayobjects.com/zos/antfincdn/trEfLRh5pc/G2%252520keshihuatuxingyufa.svg',
+        slogan: '可视化引擎',
+        description: '数据驱动，高度易用，可扩展的可视化图形语法。',
+        category: 'ecology',
+        items: [
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer01-1',
+            url: `${homepage}`,
+          },
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer01-2',
+            url: `${homepage}`,
+          },
+        ],
+      },
+      {
+        title: 'Footer02',
+        icon:
+          'https://gw.alipayobjects.com/zos/antfincdn/D%26fDbWqVkv/F2%252520yidongduankeshihuafangan.svg',
+        slogan: '移动可视化方案',
+        description:
+          '专注于移动端的可视化解决方案，兼容 H5/小程序/Weex 等多端环境',
+        category: 'ecology',
+        items: [
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer02-1',
+            url: `${homepage}`,
+          },
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer02-2',
+            url: `${homepage}`,
+          },
+        ],
+      },
+      {
+        title: 'Footer03',
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        items: [
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer03-1',
+            url: `${homepage}`,
+            description: '企业级 UI 设计语言',
+            openExternal: true,
+          },
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer03-2',
+            url: `${homepage}`,
+            description: '知识创作与分享工具',
+            openExternal: true,
+          },
+          {
+            icon:
+              'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+            title: 'Footer03-3',
+            url: `${homepage}`,
+            description: '中台建站平台',
+            openExternal: true,
+          },
+        ],
+      },
+    ],
+    bottomLinks: [
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'Bottom1',
+        url: `${homepage}`,
+      },
+      {
+        icon:
+          'https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg',
+        title: 'Bottom2',
+        url: `${homepage}`,
+      },
+      {
+        title: 'Bottom3',
+        url: `${homepage}`,
+      },
+    ],
+    hiddenThemeAuthor: false,
+    siteCopyright: '© 2020 XXXXXX',
     playground: {
-      container: '<canvas id="container" />', // 定义演示的渲染节点，默认 <div id="container" />
+      container: '<div id="container" class="ok" />',
       playgroundDidMount: 'console.log("playgroundDidMount");',
       playgroundWillUnmount: 'console.log("playgroundWillUnmount");',
+      dependencies: {
+        '@antv/l7': 'beta',
+      },
+      htmlCodeTemplate: `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+  </head>
+  <body>
+    <div id="container" />
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"></script>
+    <script>
+{{code}}
+    </script>
+  </body>
+</html>`,
     },
-    versions: {
-      '1.x': 'https://1x.xxxxxx',
-      '2.x': 'https://2x.xxxxxx',
-      '3.x': 'https://xxxxxx',
-    },
+    redirects: [],
   },
 };
 ```
